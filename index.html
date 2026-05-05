@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDFMaster – Every PDF Tool in One Place</title>
+  <meta name="description" content="PDFMaster is the all-in-one PDF toolkit. Merge, split, compress, convert, edit, and secure PDFs — free, fast, and browser-based." />
+  <meta name="keywords" content="PDF, merge PDF, split PDF, compress PDF, convert PDF, PDF editor, PDF tools" />
+  <meta name="author" content="PDFMaster" />
+  <meta property="og:title" content="PDFMaster – Every PDF Tool in One Place" />
+  <meta property="og:description" content="Free online PDF tools. Merge, split, compress, convert and more." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ===== TOAST NOTIFICATIONS ===== -->
+<div id="toast-container"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⬡</span>
+      <span class="logo-text">PDF<strong>Master</strong></span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#ai-tools">AI Tools</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <a href="#tools" class="btn btn-primary">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Free · Fast · Secure · Browser-Based</div>
+    <h1 class="hero-title">
+      Every tool you need<br/>
+      to work with <span class="highlight">PDFs</span><br/>
+      in one place.
+    </h1>
+    <p class="hero-sub">
+      Merge, split, compress, convert, edit, and secure PDF files.
+      No installs. No sign-up required. Powered by AI.
+    </p>
+    <div class="hero-cta">
+      <a href="#tools" class="btn btn-primary btn-lg">Explore All Tools</a>
+      <a href="#ai-tools" class="btn btn-outline btn-lg">Try AI Features ✦</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>25+</strong><span>PDF Tools</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><strong>100%</strong><span>Free to Use</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><strong>0</strong><span>Files Stored</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="pdf-card floating">
+      <div class="pdf-card-icon">📄</div>
+      <div class="pdf-card-info">
+        <span>document.pdf</span>
+        <small>2.4 MB</small>
+      </div>
+      <div class="pdf-card-badge done">✓</div>
+    </div>
+    <div class="pdf-card floating delay1">
+      <div class="pdf-card-icon">🔀</div>
+      <div class="pdf-card-info">
+        <span>Merging files...</span>
+        <div class="mini-progress"><div class="mini-bar" style="width:70%"></div></div>
+      </div>
+    </div>
+    <div class="pdf-card floating delay2">
+      <div class="pdf-card-icon">🤖</div>
+      <div class="pdf-card-info">
+        <span>AI Summary ready</span>
+        <small>3 key points</small>
+      </div>
+      <div class="pdf-card-badge ai">AI</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOOLS SECTION ===== -->
+<section class="tools-section" id="tools">
+  <div class="section-header">
+    <span class="section-tag">TOOLKIT</span>
+    <h2>Everything PDF, All in One Place</h2>
+    <p>25+ tools designed for professionals and everyday users alike.</p>
+  </div>
+
+  <!-- Organize PDF -->
+  <div class="category" id="cat-organize">
+    <div class="category-label">
+      <span class="cat-icon">🗂️</span>
+      <h3>Organize PDF</h3>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-card" data-tool="merge" onclick="openTool('merge')">
+        <div class="tool-icon">🔀</div>
+        <h4>Merge PDF</h4>
+        <p>Combine multiple PDFs into a single document.</p>
+        <span class="tool-tag">Popular</span>
+      </div>
+      <div class="tool-card" data-tool="split" onclick="openTool('split')">
+        <div class="tool-icon">✂️</div>
+        <h4>Split PDF</h4>
+        <p>Divide a PDF into separate pages or sections.</p>
+      </div>
+      <div class="tool-card" data-tool="rotate" onclick="openTool('rotate')">
+        <div class="tool-icon">🔄</div>
+        <h4>Rotate PDF</h4>
+        <p>Rotate pages to correct orientation.</p>
+      </div>
+      <div class="tool-card" data-tool="organize" onclick="openTool('organize')">
+        <div class="tool-icon">📋</div>
+        <h4>Organize PDF</h4>
+        <p>Reorder, delete, or extract pages visually.</p>
+      </div>
+      <div class="tool-card" data-tool="crop" onclick="openTool('crop')">
+        <div class="tool-icon">🪄</div>
+        <h4>Crop PDF</h4>
+        <p>Trim page margins and resize PDF pages.</p>
+      </div>
+      <div class="tool-card" data-tool="pagenumbers" onclick="openTool('pagenumbers')">
+        <div class="tool-icon">🔢</div>
+        <h4>Add Page Numbers</h4>
+        <p>Insert page numbers at custom positions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optimize PDF -->
+  <div class="category" id="cat-optimize">
+    <div class="category-label">
+      <span class="cat-icon">⚡</span>
+      <h3>Optimize PDF</h3>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-card" data-tool="compress" onclick="openTool('compress')">
+        <div class="tool-icon">🗜️</div>
+        <h4>Compress PDF</h4>
+        <p>Reduce file size without losing quality.</p>
+        <span class="tool-tag">Popular</span>
+      </div>
+      <div class="tool-card" data-tool="repair" onclick="openTool('repair')">
+        <div class="tool-icon">🔧</div>
+        <h4>Repair PDF</h4>
+        <p>Fix corrupted or damaged PDF files.</p>
+      </div>
+      <div class="tool-card" data-tool="pdfa" onclick="openTool('pdfa')">
+        <div class="tool-icon">🏛️</div>
+        <h4>PDF to PDF/A</h4>
+        <p>Convert PDFs to archival PDF/A format.</p>
+      </div>
+      <div class="tool-card" data-tool="ocr" onclick="openTool('ocr')">
+        <div class="tool-icon">👁️</div>
+        <h4>OCR PDF</h4>
+        <p>Extract text from scanned documents.</p>
+        <span class="tool-tag">AI</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Convert PDF -->
+  <div class="category" id="cat-convert">
+    <div class="category-label">
+      <span class="cat-icon">🔁</span>
+      <h3>Convert PDF</h3>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-card" data-tool="pdf2word" onclick="openTool('pdf2word')">
+        <div class="tool-icon">📝</div>
+        <h4>PDF to Word</h4>
+        <p>Convert PDF to editable .docx files.</p>
+        <span class="tool-tag">Popular</span>
+      </div>
+      <div class="tool-card" data-tool="word2pdf" onclick="openTool('word2pdf')">
+        <div class="tool-icon">📄</div>
+        <h4>Word to PDF</h4>
+        <p>Convert .doc / .docx to PDF format.</p>
+      </div>
+      <div class="tool-card" data-tool="pdf2excel" onclick="openTool('pdf2excel')">
+        <div class="tool-icon">📊</div>
+        <h4>PDF to Excel</h4>
+        <p>Extract tables from PDFs into spreadsheets.</p>
+      </div>
+      <div class="tool-card" data-tool="excel2pdf" onclick="openTool('excel2pdf')">
+        <div class="tool-icon">📈</div>
+        <h4>Excel to PDF</h4>
+        <p>Convert .xls / .xlsx sheets to PDF.</p>
+      </div>
+      <div class="tool-card" data-tool="pdf2ppt" onclick="openTool('pdf2ppt')">
+        <div class="tool-icon">📊</div>
+        <h4>PDF to PowerPoint</h4>
+        <p>Convert PDF slides to editable .pptx.</p>
+      </div>
+      <div class="tool-card" data-tool="ppt2pdf" onclick="openTool('ppt2pdf')">
+        <div class="tool-icon">🎞️</div>
+        <h4>PowerPoint to PDF</h4>
+        <p>Turn your presentations into PDF.</p>
+      </div>
+      <div class="tool-card" data-tool="jpg2pdf" onclick="openTool('jpg2pdf')">
+        <div class="tool-icon">🖼️</div>
+        <h4>JPG to PDF</h4>
+        <p>Convert images into PDF documents.</p>
+      </div>
+      <div class="tool-card" data-tool="pdf2jpg" onclick="openTool('pdf2jpg')">
+        <div class="tool-icon">📸</div>
+        <h4>PDF to JPG</h4>
+        <p>Export PDF pages as JPG images.</p>
+      </div>
+      <div class="tool-card" data-tool="html2pdf" onclick="openTool('html2pdf')">
+        <div class="tool-icon">🌐</div>
+        <h4>HTML to PDF</h4>
+        <p>Save any HTML page as a PDF file.</p>
+      </div>
+      <div class="tool-card" data-tool="scan2pdf" onclick="openTool('scan2pdf')">
+        <div class="tool-icon">📷</div>
+        <h4>Scan to PDF</h4>
+        <p>Use camera to scan documents to PDF.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit PDF -->
+  <div class="category" id="cat-edit">
+    <div class="category-label">
+      <span class="cat-icon">✏️</span>
+      <h3>Edit PDF</h3>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-card" data-tool="edit" onclick="openTool('edit')">
+        <div class="tool-icon">✏️</div>
+        <h4>Edit PDF</h4>
+        <p>Modify text, images, and annotations.</p>
+        <span class="tool-tag">Popular</span>
+      </div>
+      <div class="tool-card" data-tool="watermark" onclick="openTool('watermark')">
+        <div class="tool-icon">💧</div>
+        <h4>Watermark PDF</h4>
+        <p>Add text or image watermarks to pages.</p>
+      </div>
+      <div class="tool-card" data-tool="redact" onclick="openTool('redact')">
+        <div class="tool-icon">⬛</div>
+        <h4>Redact PDF</h4>
+        <p>Permanently hide sensitive content.</p>
+      </div>
+      <div class="tool-card" data-tool="compare" onclick="openTool('compare')">
+        <div class="tool-icon">🔍</div>
+        <h4>Compare PDF</h4>
+        <p>Highlight differences between two PDFs.</p>
+      </div>
+      <div class="tool-card" data-tool="forms" onclick="openTool('forms')">
+        <div class="tool-icon">📋</div>
+        <h4>PDF Forms</h4>
+        <p>Create and fill interactive PDF forms.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Security -->
+  <div class="category" id="cat-security">
+    <div class="category-label">
+      <span class="cat-icon">🔒</span>
+      <h3>Security</h3>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-card" data-tool="protect" onclick="openTool('protect')">
+        <div class="tool-icon">🔐</div>
+        <h4>Protect PDF</h4>
+        <p>Encrypt PDF with a password.</p>
+        <span class="tool-tag">Popular</span>
+      </div>
+      <div class="tool-card" data-tool="unlock" onclick="openTool('unlock')">
+        <div class="tool-icon">🔓</div>
+        <h4>Unlock PDF</h4>
+        <p>Remove password protection from PDFs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI TOOLS ===== -->
+<section class="ai-section" id="ai-tools">
+  <div class="ai-bg">
+    <div class="ai-orb orb1"></div>
+    <div class="ai-orb orb2"></div>
+  </div>
+  <div class="section-header light">
+    <span class="section-tag glow">✦ AI POWERED</span>
+    <h2>AI-Enhanced PDF Tools</h2>
+    <p>Intelligent features powered by advanced language models.</p>
+  </div>
+  <div class="ai-grid">
+    <div class="ai-card" onclick="openTool('summarize')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-icon">🤖</div>
+      <h3>AI PDF Summarizer</h3>
+      <p>Get instant intelligent summaries of any PDF document. Extract key points, conclusions, and action items automatically.</p>
+      <div class="ai-features">
+        <span>Key Points</span>
+        <span>Bullet Summary</span>
+        <span>Q&A Mode</span>
+      </div>
+      <button class="btn btn-ai">Try AI Summarizer →</button>
+    </div>
+    <div class="ai-card" onclick="openTool('translate')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-icon">🌍</div>
+      <h3>AI PDF Translator</h3>
+      <p>Translate your PDF to 50+ languages instantly while preserving formatting, layout, and document structure.</p>
+      <div class="ai-features">
+        <span>50+ Languages</span>
+        <span>Layout Preserved</span>
+        <span>Bulk Translate</span>
+      </div>
+      <button class="btn btn-ai">Try AI Translator →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORKFLOW BUILDER ===== -->
+<section class="workflow-section" id="workflow">
+  <div class="section-header">
+    <span class="section-tag">WORKFLOW BUILDER</span>
+    <h2>Combine Tools Into Workflows</h2>
+    <p>Chain multiple PDF operations and run them all at once.</p>
+  </div>
+  <div class="workflow-builder" id="workflowBuilder">
+    <div class="workflow-steps" id="workflowSteps">
+      <div class="workflow-placeholder">
+        <span>➕</span>
+        <p>Add steps to your workflow</p>
+      </div>
+    </div>
+    <div class="workflow-toolbar">
+      <select class="wf-select" id="wfToolSelect">
+        <option value="">— Select a tool —</option>
+        <option value="merge">Merge PDF</option>
+        <option value="split">Split PDF</option>
+        <option value="compress">Compress PDF</option>
+        <option value="rotate">Rotate PDF</option>
+        <option value="watermark">Watermark PDF</option>
+        <option value="protect">Protect PDF</option>
+        <option value="ocr">OCR PDF</option>
+        <option value="summarize">AI Summarize</option>
+      </select>
+      <button class="btn btn-primary" onclick="addWorkflowStep()">+ Add Step</button>
+      <button class="btn btn-outline" onclick="clearWorkflow()">Clear</button>
+      <button class="btn btn-success" onclick="runWorkflow()">▶ Run Workflow</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing-section" id="pricing">
+  <div class="section-header">
+    <span class="section-tag">PLANS</span>
+    <h2>Simple, Transparent Pricing</h2>
+    <p>Start for free. Upgrade when you need more.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="plan-badge free">FREE</div>
+      <h3>Free</h3>
+      <div class="plan-price">$0<span>/mo</span></div>
+      <ul class="plan-features">
+        <li>✓ All 25+ tools</li>
+        <li>✓ Up to 10MB per file</li>
+        <li>✓ 5 tasks per day</li>
+        <li>✓ Browser-based processing</li>
+        <li>✗ AI Features</li>
+        <li>✗ Batch processing</li>
+      </ul>
+      <button class="btn btn-outline w-full">Get Started Free</button>
+    </div>
+    <div class="pricing-card featured">
+      <div class="plan-badge pro">PRO</div>
+      <h3>Pro</h3>
+      <div class="plan-price">$9<span>/mo</span></div>
+      <ul class="plan-features">
+        <li>✓ Everything in Free</li>
+        <li>✓ Up to 100MB per file</li>
+        <li>✓ Unlimited tasks</li>
+        <li>✓ AI Summarizer & Translator</li>
+        <li>✓ Batch processing</li>
+        <li>✓ Priority processing</li>
+      </ul>
+      <button class="btn btn-primary w-full">Start Pro Trial</button>
+    </div>
+    <div class="pricing-card">
+      <div class="plan-badge team">TEAM</div>
+      <h3>Team</h3>
+      <div class="plan-price">$29<span>/mo</span></div>
+      <ul class="plan-features">
+        <li>✓ Everything in Pro</li>
+        <li>✓ Unlimited file size</li>
+        <li>✓ Team collaboration</li>
+        <li>✓ API access</li>
+        <li>✓ Custom workflows</li>
+        <li>✓ Priority support</li>
+      </ul>
+      <button class="btn btn-outline w-full">Contact Sales</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-icon">⬡</span>
+      <span class="logo-text">PDF<strong>Master</strong></span>
+      <p>The all-in-one PDF toolkit for everyone.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="#cat-organize">Organize PDF</a>
+        <a href="#cat-optimize">Optimize PDF</a>
+        <a href="#cat-convert">Convert PDF</a>
+        <a href="#cat-edit">Edit PDF</a>
+        <a href="#cat-security">Security</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">API</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Help Center</a>
+        <a href="#">Contact</a>
+        <a href="#">Status</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 PDFMaster. All rights reserved. Files are auto-deleted after processing.</p>
+  </div>
+</footer>
+
+<!-- ===== TOOL MODAL ===== -->
+<div class="modal-overlay" id="toolModal">
+  <div class="modal" id="modalBox">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-header">
+      <div class="modal-icon" id="modalIcon">🔀</div>
+      <div>
+        <h2 id="modalTitle">Tool Name</h2>
+        <p id="modalDesc">Tool description</p>
+      </div>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <!-- Dynamic content injected by JS -->
+    </div>
+  </div>
+</div>
+
+<script src="js/tools.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
